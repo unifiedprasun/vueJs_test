@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+</head>
+<div id="vue-app">
+<h1>Data Binding</h1>    
+<h4>{{ name }}</h4>
+<p>{{ greet('Night') }}</p>
+<!-- <p>My age is {{ increment() }}</p> -->
+{{ age }}
+<p v-bind:class="name"></p>
+<button v-on:click="increment">Increment</button>
+<button v-on:click="decrement">Decrement</button>
+<hr>
+<div v-bind:class="{div1:showdiv1}">div1</div>
+<div v-bind:class="{div2:showdiv2}">div2</div>
+<button v-on:click="showdiv1=!showdiv1">Show Div I</button>
+<button v-on:click="showdiv2=!showdiv2">Show Div II</button>
+{{showdiv1}}{{showdiv2}}
+<input type="text" name="name" v-model="name">
+</div>
+<script src="app2.js"></script>
+<body>
+    
+</body>
+</html>
